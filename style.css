@@ -1,0 +1,39 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Segoe UI",sans-serif;background:linear-gradient(135deg,#ffe7f0,#f7e9ff,#e9f5ff);color:#4a3040;min-height:100vh;overflow-x:hidden}
+.screen{min-height:100vh;display:flex;justify-content:center;align-items:center;padding:25px}
+.card{background:rgba(255,255,255,.74);backdrop-filter:blur(15px);border:1px solid rgba(255,255,255,.85);border-radius:28px;box-shadow:0 15px 50px rgba(150,80,120,.15)}
+.intro-card{width:min(500px,100%);padding:55px 30px;text-align:center;animation:float 3s ease-in-out infinite}
+.sparkle{font-size:45px;margin-bottom:15px}
+.intro-card h1{font-size:45px;color:#d85b91;margin-bottom:15px}
+.intro-card p{font-size:18px;margin-bottom:30px}
+button{border:0;padding:15px 28px;border-radius:50px;background:linear-gradient(135deg,#e86b9d,#b96be8);color:white;font-size:16px;cursor:pointer;box-shadow:0 8px 20px rgba(190,90,150,.3);transition:.3s}
+button:hover{transform:scale(1.06)}
+.hidden{display:none}
+.hero{min-height:90vh;text-align:center;padding:100px 20px 50px}
+.small{font-size:15px;letter-spacing:2px;text-transform:uppercase;opacity:.75}
+.hero h1{margin-top:15px;font-size:clamp(45px,10vw,85px);color:#d45b91}
+.hero h2{font-size:clamp(35px,8vw,65px);color:#9b5cc4}
+.subtitle{margin:20px auto;max-width:600px;font-size:18px;line-height:1.6}
+.cake{font-size:90px;margin-top:30px;animation:bounce 1.8s infinite}
+.message{max-width:700px;margin:30px auto;padding:40px 30px;text-align:center;line-height:1.8}
+.message h2{color:#c85d92;margin-bottom:25px}
+.message p{margin:16px 0}
+.highlight{color:#c34c88;font-weight:bold;font-size:20px}
+.gallery{padding:80px 20px;text-align:center}
+.gallery h2{font-size:34px;color:#a45bbf;margin:8px 0 35px}
+.photos{max-width:1000px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:start}
+.photo{background:#fff;padding:9px;border-radius:20px;box-shadow:0 12px 35px rgba(100,50,100,.18);transition:.4s}
+.photo-one{transform:rotate(-2deg)}.photo-two{transform:rotate(2deg)}.photo-three{transform:rotate(-1deg)}
+.photo:hover{transform:translateY(-8px) rotate(0) scale(1.02)}
+.photo img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:15px;display:block}
+.photo figcaption{padding:13px 5px 7px;font-size:14px;color:#76536b}
+.final{max-width:650px;margin:40px auto 80px;padding:50px 30px;text-align:center}
+.big-heart{font-size:70px;color:#df659b;animation:heartbeat 1.3s infinite}
+.final h2{color:#c45b91;margin:15px 0}
+.final p{line-height:1.7}.nickname{margin-top:20px;font-weight:bold;color:#9c59b9}.confetti{font-size:30px;margin-top:25px}
+.heart{position:fixed;bottom:-30px;font-size:22px;animation:rise 5s linear forwards;pointer-events:none;z-index:10}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
+@keyframes heartbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+@keyframes rise{from{transform:translateY(0) rotate(0);opacity:1}to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
+@media(max-width:700px){.intro-card h1{font-size:38px}.photos{grid-template-columns:1fr;max-width:360px}.photo-one,.photo-two,.photo-three{transform:rotate(0)}.message{margin:20px}.hero{padding-top:80px}}
